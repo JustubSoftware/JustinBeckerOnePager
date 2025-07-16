@@ -1,0 +1,43 @@
+<div class="about-container">
+  <div class="intro">
+    <h2>Über mich</h2>
+    <p>
+      Ich wurde am <strong>10.09.1999</strong> in Lauterbach geboren und lebe heute in
+      <strong>Wartenberg-Angersbach</strong>, einem kleinen, idyllischen Ort im Vogelsberg. 
+      Hier, in der Nähe von Wäldern und Feldern, habe ich meine Kindheit verbracht und 
+      die Ruhe sowie das einfache Leben sehr geschätzt.
+    </p>
+
+    <p>
+      Angersbach hat mit seinen weiten Feldern und dichten Wäldern einen ganz besonderen 
+      Charme. Die Natur ist hier immer nur einen Schritt entfernt – die Zeit vergeht langsamer 
+      und das Leben ist entschleunigt. Die enge Dorfgemeinschaft prägt mich bis heute.
+    </p>
+
+    <p>
+      <strong>Im Winter</strong> sieht es hier aus wie im Märchen: verschneite Felder, stille Wälder – perfekt für 
+      Spaziergänge oder ruhige Momente. <strong>Im Sommer</strong> liebe ich es, mit dem Fahrrad durch die 
+      Landschaft zu fahren oder einfach die frische Luft zu genießen.
+    </p>
+
+    <p>
+      Diese tiefe Verbindung zur Natur beeinflusst nicht nur mein Leben, sondern auch meine 
+      Denkweise und Lebensphilosophie.
+    </p>
+  </div>
+
+  <div class="hobby-list">
+    <h2>Meine Hobbys</h2>
+    <div
+      class="hobby-card"
+      *ngFor="let hobby of hobbies"
+      [ngStyle]="{ '--hobby-image': 'url(' + hobby.image + ')' }"
+    >
+      <div class="hobby-image-overlay"></div>
+      <div class="hobby-content">
+        <h3>{{ hobby.name }}</h3>
+        <p>{{ hobby.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
