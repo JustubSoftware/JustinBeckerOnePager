@@ -1,4 +1,4 @@
-<div class="about-container">
+<div class="about-container" data-aos="fade-up">
   <div class="intro">
     <h2>Über mich</h2>
     <p>
@@ -32,6 +32,7 @@
       class="hobby-card"
       *ngFor="let hobby of hobbies"
       [ngStyle]="{ '--hobby-image': 'url(' + hobby.image + ')' }"
+      [attr.data-aos]="hobby.animation"
     >
       <div class="hobby-image-overlay"></div>
       <div class="hobby-content">
