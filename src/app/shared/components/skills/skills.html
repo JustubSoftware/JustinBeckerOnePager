@@ -1,1 +1,14 @@
-<p>skills works!</p>
+<div class="skills-container">
+  <h2>Meine Skills</h2>
+  <p class="skills-intro">
+    In den letzten Jahren habe ich mit verschiedenen Technologien gearbeitet, die ich in Webprojekten praktisch einsetze – vom Frontend über das Backend bis zur Containerisierung.
+  </p>
+  
+  <div class="tech-grid">
+    <div class="tech-card" *ngFor="let tech of techCards">
+      <img [src]="tech.image" [alt]="tech.alt" class="tech-logo">
+      <h3>{{ tech.title }}</h3>
+      <p [innerHTML]="tech.description"></p>
+    </div>
+  </div>
+</div>

@@ -11,7 +11,17 @@
     margin-bottom: 2rem;
   }
 
+   .skills-intro {
+        max-width: 700px;
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: white;
+        background: transparent;
+    }
+
   .career-list {
+    margin-top:3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -22,7 +32,6 @@
 
   .career-card {
     position: relative;
-    background: rgba(0, 255, 255, 0.05);
     border-radius: 1rem;
     overflow: hidden;
     padding: 1.5rem;
