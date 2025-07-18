@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
-export class Contact {
+export class Contact implements OnInit{
+
+  ngOnInit(): void {
+      AOS.init({
+        duration: 2000,
+        once: true,
+      });
+  }
 
  contactForm: FormGroup;
 
