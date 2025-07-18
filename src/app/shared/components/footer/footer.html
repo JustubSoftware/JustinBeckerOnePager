@@ -1,1 +1,39 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Kontakt</h3>
+      <p>
+        Justin Becker<br>
+        Wartenberg, Hessen
+      </p>
+        <a href="mailto:mail@justinbecker.de">
+            <lucide-icon name="Mail"></lucide-icon>
+            mail&#64;justinbecker.de
+        </a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Rechtliches</h3>
+      <ul>
+        <li><a routerLink="/impressum">Impressum</a></li>
+        <li><a routerLink="/datenschutz">Datenschutz</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section socials">
+      <h3>Social Media</h3>
+      <div class="social-icons">
+        <a href="https://github.com/JustubSoftware" target="_blank" rel="noopener">
+          <lucide-icon name="Github"></lucide-icon>
+        </a>
+        <a href="https://www.linkedin.com/in/justin-becker-87471b235/" target="_blank" rel="noopener">
+          <lucide-icon name="Linkedin"></lucide-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © {{ currentYear }} Justin Becker – Alle Rechte vorbehalten.
+  </div>
+</footer>

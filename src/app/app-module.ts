@@ -12,6 +12,8 @@ import { Footer } from './shared/components/footer/footer';
 import { NgParticlesModule } from 'ng-particles';
 import { AnimatedBackground } from './shared/components/animated-background/animated-background';
 import { Werdegang } from './shared/components/werdegang/werdegang';
+import { LucideAngularModule} from 'lucide-angular';
+import { Github, Linkedin, Mail} from 'lucide-angular/src/icons';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { Werdegang } from './shared/components/werdegang/werdegang';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgParticlesModule
+    NgParticlesModule,
+    LucideAngularModule.pick({Github, Linkedin, Mail})
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

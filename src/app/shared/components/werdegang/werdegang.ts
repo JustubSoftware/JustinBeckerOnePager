@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-werdegang',
@@ -6,7 +7,15 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './werdegang.html',
   styleUrl: './werdegang.scss'
 })
-export class Werdegang {
+export class Werdegang implements OnInit{
+
+  ngOnInit(): void {
+        AOS.init({
+          duration: 2000,
+          once: true,
+        });
+    }
+    
     careerItems = [
   {
     title: 'Hauptschulabschluss an der Mittelpunktschule Angersbach',
