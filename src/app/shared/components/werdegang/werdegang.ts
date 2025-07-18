@@ -15,7 +15,7 @@ export class Werdegang implements OnInit{
           once: true,
         });
     }
-    
+
     careerItems = [
   {
     title: 'Hauptschulabschluss an der Mittelpunktschule Angersbach',
@@ -28,6 +28,15 @@ export class Werdegang implements OnInit{
     year: '2015 - 2017',
     description: 'An der Vogelsbergschule Lauterbach vertiefte ich mein Wissen in Wirtschaft und Verwaltung. Dies half mir, betriebliche Abläufe und organisatorische Prozesse besser zu verstehen.',
     image: 'url(/assets/VBS.jpg)'
+  },
+    {
+    title: 'Praktikum im E‑Commerce bei HorSeven GmbH, Angersbach',
+    year: '2017 – 2018',
+    description: `
+    Während meines Praktikums bei der HorSeven GmbH, einem führenden Anbieter im Pferdedecken‑Handel, unterstützte ich das Team im Bereich E‑Commerce.
+    Zu meinen Aufgaben gehörten die Pflege von Produktdaten, Bildbearbeitung und die Optimierung von Artikelseiten.
+  `,
+    image: 'url(/assets/HorSeven.jpg)'
   },
   {
     title: 'Fachabitur Wirtschaftsinformatik',

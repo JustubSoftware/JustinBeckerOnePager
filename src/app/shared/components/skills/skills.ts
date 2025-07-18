@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 @Component({
   selector: 'app-skills',
   standalone: false,
   templateUrl: './skills.html',
   styleUrl: './skills.scss'
 })
-export class Skills {
+export class Skills implements OnInit{
+
+   ngOnInit(): void {
+      AOS.init({
+        duration: 2000,
+        once: true,
+      });
+    }
+  
   techCards = [
     {
       title: 'Angular',

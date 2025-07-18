@@ -9,15 +9,19 @@
     color:white;
     position:relative;
     margin-bottom: 2rem;
+    background: transparent;
   }
 
-   .skills-intro {
+   .career-intro {
         max-width: 700px;
         margin-top: 1.5rem;
         font-size: 1.2rem;
         line-height: 1.6;
         color: white;
         background: transparent;
+        p {
+            background: transparent;
+        }
     }
 
   .career-list {
@@ -28,6 +32,7 @@
     max-height: none;
     overflow-y: visible;
     padding-right: 0;
+    background: transparent;
   }
 
   .career-card {
@@ -40,6 +45,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease;
+    background: rgba(0, 255, 255, 0.05);
 
     &:hover {
       transform: scale(1.02);
@@ -128,15 +134,41 @@
   }
 }
 
-@media (max-width: 900px) {
-  .career-list {
-    grid-template-columns: 1fr;
-  }
-}
 
 @media (max-width: 600px) {
-  .career-list {
-    grid-template-columns: 1fr;
+  .career-container {
+    padding: 0 1rem;
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .skills-intro {
+      font-size: 1rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .career-list {
+      gap: 1rem;
+    }
+
+    .career-card {
+      padding: 1rem;
+      min-height: auto;
+
+      .career-content {
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+          padding: 0.5rem 0;
+        }
+      }
+    }
   }
 }
 
@@ -147,3 +179,4 @@
   box-shadow: none !important;
   border: none !important;
 }
+
