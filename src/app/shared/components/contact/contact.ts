@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,4 +9,27 @@ import { Component } from '@angular/core';
 })
 export class Contact {
 
+ contactForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+    });
+  }
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+      const { name, email, message } = this.contactForm.value;
+
+      const subject = encodeURIComponent(`Kontaktanfrage von ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${message}`
+      );
+
+      const mailto = `mailto:mail@justinbecker.de?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+  }
 }

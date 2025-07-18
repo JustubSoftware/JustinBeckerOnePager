@@ -14,6 +14,7 @@ import { AnimatedBackground } from './shared/components/animated-background/anim
 import { Werdegang } from './shared/components/werdegang/werdegang';
 import { LucideAngularModule} from 'lucide-angular';
 import { Github, Linkedin, Mail} from 'lucide-angular/src/icons';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { Github, Linkedin, Mail} from 'lucide-angular/src/icons';
     BrowserModule,
     AppRoutingModule,
     NgParticlesModule,
-    LucideAngularModule.pick({Github, Linkedin, Mail})
+    LucideAngularModule.pick({Github, Linkedin, Mail}),
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

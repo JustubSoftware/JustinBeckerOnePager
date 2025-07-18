@@ -10,7 +10,11 @@
   h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    background: transparent;
+    background: linear-gradient(90deg, #53ffd1 0%, #489cff 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   .intro {

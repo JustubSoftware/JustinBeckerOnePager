@@ -1,1 +1,32 @@
-<p>contact works!</p>
+<div class="contact-container">
+  <div class="contact-form">
+    <h2>Kontakt</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <label>
+        Name:
+        <input formControlName="name" type="text" required />
+      </label>
+
+      <label>
+        E-Mail:
+        <input formControlName="email" type="email" required />
+      </label>
+
+      <label>
+        Nachricht:
+        <textarea formControlName="message" rows="5" required></textarea>
+      </label>
+
+      <button type="submit" [disabled]="contactForm.invalid">Absenden</button>
+    </form>
+  </div>
+
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.54507646424!2d9.437925076754556!3d50.624763174797366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bcc9d9f14584d7%3A0x6856a2c31e8d2ca2!2sRudloser%20Str.%2047%2C%2036367%20Wartenberg!5e1!3m2!1sde!2sde!4v1752853441739!5m2!1sde!2sde"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
