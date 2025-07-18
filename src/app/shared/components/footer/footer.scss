@@ -24,8 +24,11 @@
     h3 {
       margin-bottom: 0.8rem;
       font-size: 1.2rem;
-      color: #00ffff;
-      background: transparent;
+      background: linear-gradient(90deg, #53ffd1 0%, #489cff 80%);
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     p, a {
