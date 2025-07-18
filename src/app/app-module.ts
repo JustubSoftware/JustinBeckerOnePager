@@ -11,6 +11,7 @@ import { Header } from './shared/components/header/header';
 import { Footer } from './shared/components/footer/footer';
 import { NgParticlesModule } from 'ng-particles';
 import { AnimatedBackground } from './shared/components/animated-background/animated-background';
+import { Werdegang } from './shared/components/werdegang/werdegang';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AnimatedBackground } from './shared/components/animated-background/anim
     Skills,
     Header,
     Footer,
-    AnimatedBackground
+    AnimatedBackground,
+    Werdegang
   ],
   imports: [
     BrowserModule,

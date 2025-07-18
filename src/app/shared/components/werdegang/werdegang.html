@@ -1,0 +1,16 @@
+<div class="career-container">
+  <h2>Mein Werdegang</h2>
+  <div class="career-list">
+    <div 
+      class="career-card" 
+      *ngFor="let item of careerItems" 
+      [style.--career-image]="item.image">
+      <div class="career-image-overlay"></div>
+      <div class="career-content">
+        <h3>{{ item.title }}</h3>
+        <h4>{{ item.year }}</h4>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

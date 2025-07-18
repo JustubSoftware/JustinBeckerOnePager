@@ -106,3 +106,10 @@
     opacity: 0.4;
   }
 }
+
+/* Auf Touch-Geräten immer anzeigen */
+@media (hover: none) and (pointer: coarse) {
+  .hobby-card::before {
+    opacity: 1 !important;
+  }
+}
