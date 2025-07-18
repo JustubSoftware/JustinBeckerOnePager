@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { Home } from './home/home';
 import { Impressum } from './impressum/impressum';
 import { Datenschutz } from './datenschutz/datenschutz';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -16,11 +17,16 @@ const routes: Routes = [
   {
     path: 'datenschutz',
     component: Datenschutz
-  }
+  },
 ];
+
+const routerOptions: ExtraOptions = {
+  useHash: true,
+};
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
 })
 export class AppRoutingModule { }
