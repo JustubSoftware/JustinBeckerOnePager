@@ -112,9 +112,15 @@
   }
 }
 
-/* Auf Touch-Geräten immer anzeigen */
 @media (hover: none) and (pointer: coarse) {
-  .hobby-card::before {
+  .hobby-card .hobby-content p {
     opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  .hobby-card .hobby-image-overlay {
+    opacity: 1 !important;
+    transform: scale(1.05) !important;
+    animation: explode 1.8s ease infinite;
   }
 }
