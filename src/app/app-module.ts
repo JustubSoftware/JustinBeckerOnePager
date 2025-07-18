@@ -15,6 +15,8 @@ import { Werdegang } from './shared/components/werdegang/werdegang';
 import { LucideAngularModule} from 'lucide-angular';
 import { Github, Linkedin, Mail} from 'lucide-angular/src/icons';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Impressum } from './impressum/impressum';
+import { Datenschutz } from './datenschutz/datenschutz';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     Header,
     Footer,
     AnimatedBackground,
-    Werdegang
+    Werdegang,
+    Impressum,
+    Datenschutz
   ],
   imports: [
     BrowserModule,
