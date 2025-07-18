@@ -94,13 +94,16 @@
       border-radius: 8px;
     }
   }
+}
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+ @media (max-width: 768px) {
+  .contact-container {
+    padding: 0 1rem; // Abstand vom Rand der Seite auf kleineren Screens
 
     .contact-form,
     .map {
       flex: 1 1 100%;
+      padding: 2rem 1rem; // inneres Padding für Abstand zu den Rändern
     }
   }
 }

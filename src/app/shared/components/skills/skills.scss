@@ -80,3 +80,18 @@
     }   
 }
 
+@media (max-width: 600px) {
+  .skills-container {
+    padding: 0 1rem; // sorgt für Abstand links/rechts
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr; // nur eine Karte pro Zeile
+    gap: 1.5rem; // kleineres Gap bei kleinen Screens
+  }
+
+  .tech-card {
+    padding: 1.5rem 1rem; // etwas schmaler
+  }
+}
+
